@@ -61,6 +61,6 @@ document.getElementById('leadForm').addEventListener('submit',e=>{
 (function(){
   var p=location.pathname.split('/').pop();
   if(p&&p!=='index.html')return;
-  var m={'#listings':'for-sale.html','#sold':'sold.html','#request':'request.html','#areas':'areas.html','#faq':'faq.html','#about':'about.html','#reviews':'about.html#reviews','#services':'about.html#services','#contact':'contact.html'};
+  var m={'#listings':'for-sale.html','#sold':'sold.html','#request':'request.html','#areas':'areas.html','#faq':'faq.html','#about':'about.html','#reviews':'reviews.html','#services':'about.html#services','#contact':'contact.html'};
   if(m[location.hash])location.replace(m[location.hash]);
 })();
