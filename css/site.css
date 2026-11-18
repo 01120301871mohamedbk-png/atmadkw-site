@@ -449,26 +449,31 @@ body.t-sold{background:#14050A}
 .t-contact section#contact{background:linear-gradient(180deg,#EEF9F2,#fff)}
 /* hub tiles on home */
 .hub{background:linear-gradient(180deg,var(--paper),#fff)}
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.tile{position:relative;display:flex;flex-direction:column;gap:6px;padding:26px 22px;border-radius:24px;color:#fff;background:linear-gradient(140deg,var(--t1),var(--t2));overflow:hidden;min-height:190px;transition:.3s;box-shadow:0 14px 34px rgba(10,22,48,.16)}
-.tile::before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;top:-90px;left:-70px;background:radial-gradient(circle,color-mix(in srgb,var(--ac) 45%,transparent),transparent 70%)}
-.tile:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(10,22,48,.25)}
-.tile i{position:relative;font-style:normal;font-size:30px;width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.14);margin-bottom:8px;font-weight:900;color:var(--ac)}
-.tile b{position:relative;font-size:22px;font-weight:900}
-.tile small{position:relative;font-size:14.5px;color:rgba(255,255,255,.8)}
-.tile em{position:relative;margin-top:auto;font-style:normal;font-weight:800;color:var(--ac);font-size:15px}
-.tile .tn{position:absolute;top:18px;left:18px;min-width:44px;height:44px;padding:0 10px;border-radius:999px;background:var(--ac);color:#0b1020;font-weight:900;font-size:20px;display:grid;place-items:center}
-.tile.t-sale{grid-column:span 2}.tile.t-sold{grid-column:span 2}
-.tile.t-sale b,.tile.t-sold b{font-size:30px}
-@media (max-width:900px){.tiles{grid-template-columns:1fr 1fr}}
+.tiles{display:flex;flex-direction:column;gap:16px;max-width:900px;margin:0 auto}
+.tile{position:relative;display:flex;align-items:center;gap:18px;padding:20px 24px;border-radius:22px;color:#fff;background:linear-gradient(120deg,var(--t1),var(--t2));overflow:hidden;transition:.3s;box-shadow:0 12px 30px rgba(10,22,48,.15)}
+.tile:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(10,22,48,.24)}
+.tile i{flex:none;font-style:normal;font-size:26px;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.14);font-weight:900;color:var(--ac)}
+.tile .tx{position:relative;display:flex;flex-direction:column;gap:2px;flex:1}
+.tile b{font-size:21px;font-weight:900}
+.tile small{font-size:14.5px;color:rgba(255,255,255,.82)}
+.tile>em{font-style:normal;font-weight:900;font-size:22px;color:var(--ac)}
+.tile.big{display:block;padding:0;min-height:300px}
+.tile.big .pics{position:absolute;inset:0;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
+.tile.big .pics img{width:100%;height:100%;object-fit:cover;display:block}
+.tile.big .pics img:first-child{grid-row:span 2}
+.tile.big::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--t1) 18%,color-mix(in srgb,var(--t1) 80%,transparent) 45%,transparent 80%)}
+.tile.big .tx{position:absolute;z-index:2;inset-inline:0;bottom:0;padding:22px 26px}
+.tile.big b{font-size:34px;line-height:1.2}
+.tile.big em{font-style:normal;font-weight:900;color:var(--ac);margin-top:8px;font-size:16px}
+.tile .lbl{align-self:flex-start;padding:5px 16px;border-radius:999px;font-weight:900;font-size:14px;background:var(--ac);color:#0b1020;margin-bottom:6px}
+.t-sold .lbl{background:#D32F3A;color:#fff;letter-spacing:2px;font-family:Arial,sans-serif}
+.tile.t-sold .pics img{filter:grayscale(.35) contrast(1.05)}
+.stampx{position:absolute;z-index:3;top:18px;left:18px;width:96px;height:96px;border-radius:50%;display:grid;place-items:center;text-align:center;background:#D32F3A;color:#fff;font-weight:900;font-size:19px;line-height:1.1;border:3px double #fff;transform:rotate(-14deg);box-shadow:0 10px 26px rgba(0,0,0,.45)}
+
 @media (max-width:760px){
   .phero{padding:100px 0 40px}
   .phero p{font-size:15.5px}
-  .tiles{gap:12px}
-  .tile{min-height:150px;padding:18px 16px;border-radius:20px}
-  .tile b{font-size:18px}.tile small{font-size:13px}
-  .tile.t-sale b,.tile.t-sold b{font-size:24px}
-  .tile i{width:46px;height:46px;font-size:24px}
+  .tiles{gap:12px}.tile{padding:16px;border-radius:20px;gap:14px}.tile b{font-size:18px}.tile small{font-size:13px}.tile i{width:48px;height:48px;font-size:22px}.tile.big{min-height:250px}.tile.big b{font-size:28px}.tile.big .tx{padding:16px 18px}.stampx{width:76px;height:76px;font-size:15px}
   .page:not(.t-home) .grid,.page:not(.t-home) .sold-grid,.page:not(.t-home) .areas{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important;margin:0!important;padding:0!important}
   .page:not(.t-home) .grid>.card,.page:not(.t-home) .sold-grid>.sold,.page:not(.t-home) .areas>.area{flex:none}
   .links a.on::after{display:none}
