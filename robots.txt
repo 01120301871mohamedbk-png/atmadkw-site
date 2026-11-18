@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://atmadkw.com/sitemap.xml
