@@ -468,12 +468,17 @@ body.t-sold{background:#14050A}
 .tile .lbl{align-self:flex-start;padding:5px 16px;border-radius:999px;font-weight:900;font-size:14px;background:var(--ac);color:#0b1020;margin-bottom:6px}
 .t-sold .lbl{background:#D32F3A;color:#fff;letter-spacing:2px;font-family:Arial,sans-serif}
 .tile.t-sold .pics img{filter:grayscale(.35) contrast(1.05)}
+.tile:not(.big){min-height:120px}
+.tile .sp{position:absolute;top:0;bottom:0;left:0;width:50%;background-size:cover;background-position:center}
+.tile .sp::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,var(--t2) 0%,color-mix(in srgb,var(--t2) 55%,transparent) 35%,transparent 75%)}
+.tile:not(.big) i,.tile:not(.big) .tx{position:relative;z-index:1}
+.tile:not(.big)>em{position:relative;z-index:1;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);font-size:20px}
 .stampx{position:absolute;z-index:3;top:18px;left:18px;width:96px;height:96px;border-radius:50%;display:grid;place-items:center;text-align:center;background:#D32F3A;color:#fff;font-weight:900;font-size:19px;line-height:1.1;border:3px double #fff;transform:rotate(-14deg);box-shadow:0 10px 26px rgba(0,0,0,.45)}
 
 @media (max-width:760px){
   .phero{padding:100px 0 40px}
   .phero p{font-size:15.5px}
-  .tiles{gap:12px}.tile{padding:16px;border-radius:20px;gap:14px}.tile b{font-size:18px}.tile small{font-size:13px}.tile i{width:48px;height:48px;font-size:22px}.tile.big{min-height:250px}.tile.big b{font-size:28px}.tile.big .tx{padding:16px 18px}.stampx{width:76px;height:76px;font-size:15px}
+  .tiles{gap:12px}.tile{padding:16px;border-radius:20px;gap:14px}.tile b{font-size:18px}.tile small{font-size:13px}.tile i{width:48px;height:48px;font-size:22px}.tile.big{min-height:250px}.tile:not(.big){min-height:104px}.tile .sp{width:36%}.tile.big b{font-size:28px}.tile.big .tx{padding:16px 18px}.stampx{width:76px;height:76px;font-size:15px}
   .page:not(.t-home) .grid,.page:not(.t-home) .sold-grid,.page:not(.t-home) .areas{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important;margin:0!important;padding:0!important}
   .page:not(.t-home) .grid>.card,.page:not(.t-home) .sold-grid>.sold,.page:not(.t-home) .areas>.area{flex:none}
   .links a.on::after{display:none}
