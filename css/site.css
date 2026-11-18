@@ -504,3 +504,8 @@ body.t-sold{background:#14050A}
 }
 .t-rev .rev-box{background:linear-gradient(135deg,#3a2306,#8a5a12)!important}
 .t-rev .stars a{color:#FFD15C}
+
+/* listing full details */
+.card .desc{list-style:none;margin:8px 0 4px;padding:10px 12px;background:#f7f4ee;border-radius:12px;display:flex;flex-direction:column;gap:5px;font-size:14px;color:#3a3a3a;line-height:1.6}
+.card .desc li{position:relative;padding-right:16px}
+.card .desc li::before{content:"";position:absolute;right:0;top:.65em;width:7px;height:7px;border-radius:50%;background:#CB9C58}
